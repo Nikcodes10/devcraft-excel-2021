@@ -1,15 +1,22 @@
+/* FONT IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
-
+/* GLOBAL VARIABLES */
 :root {
-  --primary-font: 'Montserrat', sans-serif;
+  --primary-font: 'Poppins', sans-serif;
+  --secondary-font: 'Montserrat', sans-serif;
 }
 
+
 [data-theme="light"]{
-  --primary-color: #F6503B;
+  --primary-color: #156b6a;
+  --secondary_color: #ffc000;
+  --tertiary-color: #2e1460;
   --primary-bg: #F3F5F7;
   --text-primary: #555555;
   --text-60: hsla(0,0,33%,0.6);
@@ -21,13 +28,5 @@
 }
 
 [data-theme="dark"]{
-  --primary-color: #B1E0FA;
-  --primary-bg: #F3F5F7;
-  --text-primary: #555555;
-  --text-60: hsla(0,0,33%,0.6);
-  --text-50: hsla(0,0,33%,0.5);
-  --white: #fafafa;
-  --bg: #2F2F2F;
-  --bg-invert: #ECF4F8;
-  --input-shadow: inset 3px 3px 6px rgba(255, 255, 255, 0.20), inset -3px -3px 6px rgba(0, 0, 0, 0.50);
+
 }
