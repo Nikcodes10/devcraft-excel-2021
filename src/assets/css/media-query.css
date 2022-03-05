@@ -1,0 +1,40 @@
+@media (min-width: 992px) and (max-width: 1380px) {
+  .d_none {
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .d_none_992 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .d_none_800 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .d_none_600 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .d_none_400 {
+    display: none;
+  }
+}
+  
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+  480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
+}
