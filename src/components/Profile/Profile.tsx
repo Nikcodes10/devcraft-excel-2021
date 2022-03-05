@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import CustomTitle from '../../utils/CustomTitle';
 import './Profile.css'
 
 function Profile() {
@@ -11,6 +12,7 @@ function Profile() {
 
   return (
     <div className='profile'>
+      <CustomTitle title="Profile"/>
       <div className='profile__container'>
         <h1>Account</h1>
         <div className='profile__header'>
