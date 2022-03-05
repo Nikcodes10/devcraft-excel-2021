@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import { AuthContext } from '../../context/AuthContext';
 import CustomTitle from '../../utils/CustomTitle'
 
 import './Auth.css'
@@ -10,6 +10,12 @@ function Login() {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [usernameErr, setUsernameErr] = useState('')
+  const [passwordErr, setPasswordErr] = useState('')
+
+  const { handleToken, handleUser } = useContext(AuthContext);
+
+  const serverURL = process.env.REACT_APP_BACKEND_URL + '/auth/login';
 
   let navigate = useNavigate();
 
@@ -22,6 +28,32 @@ function Login() {
 
   const handleSignUp = (e : any) => {
     e.preventDefault()
+    let valid = true;
+    if(!username) {
+      setUsernameErr('Enter username');
+      valid = false;
+    }
+    if(!password) {
+      setUsernameErr('Enter password');
+      valid = false;
+    }
+    if(!valid)  return;
+    
+    const data = JSON.stringify({
+      username, password
+    })
+
+    fetch(serverURL, {
+      method:'POST', headers: {
+        'Content-type':'Application/json'
+      },
+      body:data
+    }).then(res => res.json())
+    .then(data => {
+      handleToken(data.token)
+      handleUser(data.user)
+    })
+    .catch(e => console.log(e))
   }
 
   return (

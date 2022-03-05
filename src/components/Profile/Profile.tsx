@@ -1,13 +1,34 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { AuthContext } from '../../context/AuthContext'
 
 import './Profile.css'
 
 function Profile() {
 
+  const { token } = useContext(AuthContext);
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [country, setCountry] = useState('')
+
+  const serverURL = process.env.REACT_APP_BACKEND_URL + '/users';
+
+  useEffect(() => {
+    console.log(token)
+    fetch(serverURL, {
+      method:'GET',
+      headers: {
+        'Authorization': `Bearer ${token}`
+      }
+    }).then(r => r.json())
+    .then(r => {
+      setName(r.user.name)
+      setEmail(r.user.email)
+      setPassword(r.user.password)
+      setCountry(r.user.country)
+    })
+    .catch(e => console.log(e))
+  }, [])
 
   return (
     <div className='profile'>

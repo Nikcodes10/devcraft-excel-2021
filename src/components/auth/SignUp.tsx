@@ -12,6 +12,12 @@ function SignUp() {
   const [email, setEmail] = useState('')
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [nameErr, setNameErr] = useState('')
+  const [emailErr, setEmailErr] = useState('')
+  const [usernameErr, setUsernameErr] = useState('')
+  const [passwordErr, setPasswordErr] = useState('')
+
+  const serverURL = process.env.REACT_APP_BACKEND_URL + '/auth/signup';
 
   let navigate = useNavigate();
 
@@ -24,6 +30,38 @@ function SignUp() {
 
   const handleSignUp = (e : any) => {
     e.preventDefault()
+
+    let valid = true;
+    if(!username) {
+      setUsernameErr('Enter username');
+      valid = false;
+    }
+    if(!password) {
+      setPasswordErr('Enter password');
+      valid = false;
+    }
+    if(!name) {
+      setUsernameErr('Enter name');
+      valid = false;
+    }
+    if(!email) {
+      setEmailErr('Enter email');
+      valid = false;
+    }
+
+    if(!valid)  return;
+
+    const data = JSON.stringify({
+      name, username, password, email
+    })
+
+    fetch(serverURL, {
+      method:'POST', headers: {
+        'Content-type':'Application/json'
+      },
+      body:data
+    }).then(d => console.log(d))
+    .catch(e => console.log(e))
   }
 
   return (
@@ -35,7 +73,6 @@ function SignUp() {
             <img src="" alt="" />
             <h2>HyFi</h2>
           </div>
-
           <form className='auth_form' onSubmit={handleSignUp}>
             <h1 className='af__h1'>Create Account!</h1>
             <h6 className='af__h6'>Please enter your details.</h6>
