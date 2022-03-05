@@ -5,7 +5,7 @@ import { ThemeContext } from './context/ThemeContext';
 import './App.css';
 
 import { LandingPage } from './pages'
-import { Profile, Login, SignUp } from './components'
+import { Profile, Login, SignUp, FourNotFour } from './components'
 // import PrivateRoute from "./utils/PrivateRoute"
 import ScrollToTop from "./utils/ScrollToTop"
 
@@ -32,7 +32,7 @@ function App() {
             /> */}
 
 
-            <Route path="*" element={<Navigate replace to="/" />} />
+            <Route path="*" element={<FourNotFour />} />
         </Routes>
       </BrowserRouter>
     </div>
