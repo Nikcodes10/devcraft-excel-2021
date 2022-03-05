@@ -37,14 +37,14 @@ function Profile() {
             <label className='profile_label'>Email</label>
             <div className='p_s_div'>
               <input className='p_s__input' type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
-              <button className='profile__secondary_btn'>Change Email</button>
+              <button className='profile__secondary_btn'>Change <span className='d_none_800'>Email</span></button>
             </div>
           </div>
           <div className='profile_security_input'>
             <label className='profile_label'>Password</label>
             <div className='p_s_div'>
               <input className='p_s__input' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-              <button className='profile__secondary_btn'>Change Password</button>
+              <button className='profile__secondary_btn'>Change <span className='d_none_800'>Password</span></button>
             </div>
           </div>
         </div>
