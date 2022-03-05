@@ -53,6 +53,7 @@ const logIn = async ({username, password, email}) => {
         if(username)    user = await User.findOne({ username }).select("+password").lean().exec()
         else    user = await User.findOne({ email }).select("+password").lean().exec()
 
+        console.log(user)
         if(!user)
             return { "success": false, "message":"No such user!", "code":304 }
         
@@ -75,5 +76,5 @@ const logIn = async ({username, password, email}) => {
     return { "success": false, "message":"Could'nt Login!", "code":500 }
 }
 
-const userController = { signIn, logIn }
-module.exports = userController;
+const authController = { signIn, logIn }
+module.exports = authController;
