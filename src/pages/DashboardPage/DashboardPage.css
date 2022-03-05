@@ -1,0 +1,54 @@
+.dashboardPage {
+    background-color: #103525;
+    min-height: 100vh;
+}
+
+.drawer_logo {
+    width: 30px;
+    cursor: pointer;
+}
+
+.drawer_logo_named {
+    width: 70px;
+    cursor: pointer;
+}
+
+.listItemText {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: 0.96rem;
+    color: #86918d;
+}
+
+.listItemText__active {
+    color: #ffffff;
+}
+
+
+.listItemIcon {
+    color: #86918d;
+    font-size: 1.25rem;
+}
+
+.listItemIcon__active {
+    color: #ffffff;
+}
+
+.border {
+    border-right: 3px solid var(--primary-color) !important;
+}
+
+.drawer_profile_item {
+    margin-top: 3rem !important;
+}
+
+.drawer_profile_img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #808080ab;
+    padding: 2px;
+    cursor: pointer;
+    box-sizing: content-box;
+    margin-top: 5px;
+}
