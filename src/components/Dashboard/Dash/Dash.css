@@ -2,6 +2,7 @@
     display: flex;
     align-items: flex-start;
     padding: 2rem;
+    gap: 2rem;
 }
 
 .dash_one {
@@ -15,6 +16,48 @@
     font-weight: bold;
     font-size: 1.2rem;
     color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.dash_income {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.dash_income__content {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 10px solid #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #162920;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.dash_income__content:hover {
+    border: 10px solid var(--primary-color);
+}
+
+
+.dash_income__content h4 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 1.325rem;
+    font-family: var(--primary-font);
+}
+.dash_income__content p {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: 1.025rem;
 }
 
 .dash_two {
@@ -28,4 +71,130 @@
     border-radius: 30px;
     padding: 1.25rem;
     height: 80vh;
+}
+
+.dash_avatars {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.dash_avatar_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid #808080ab;
+    padding: 2px;
+    cursor: pointer;
+    box-sizing: content-box;
+    margin-top: 5px;
+    transition: ease-in-out 0.2s;
+}
+
+.dash_avatar_img:hover {
+    transform: scale(1.4);
+}
+
+
+.border_green {
+    border: 2px solid var(--primary-color);
+}
+
+.dash_visa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #162920;
+    border-radius: 20px;
+    padding: 1.05rem;
+    width: 80%;
+    margin-top: 2rem;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.dash_visa h1 {
+    font-size: 1.45rem;
+    font-style: italic;
+    font-family: var(--primary-font);
+}
+
+.dash_visa h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+}
+
+.dash_two__btn {
+    width: 80%;
+    height: 50px;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+    .dash {
+        padding: 1rem;
+        gap: 1rem;
+    }
+}
+  
+  
+@media screen and (max-width: 992px) {
+    .dash {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    .dash_one {
+        flex: 1;
+        padding-top: 0;
+        width: 100%;
+    }
+    .dash_two {
+        flex: 1;
+        padding-top: 0;
+        width: 100%;
+    }
+    
+    .dash_three {
+        flex: 1;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .dash {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
 }
