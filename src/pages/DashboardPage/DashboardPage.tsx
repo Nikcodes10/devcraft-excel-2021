@@ -17,6 +17,7 @@ import named_logo from '../../assets/svg/named_logo.svg'
 
 import './DashboardPage.css'
 import CustomTitle from '../../utils/CustomTitle';
+import { Dash } from '../../components';
 
 
 const drawerWidth = 240;
@@ -93,7 +94,7 @@ function DashboardPage() {
 
     let renderTab
     if (tab === 1) {
-        renderTab = null
+        renderTab = <Dash />
     } else if(tab === 2) {
         renderTab = null
     } else if(tab === 3) {
@@ -115,6 +116,8 @@ function DashboardPage() {
 
     return (
         <div className='dashboardPage'>
+            <div className="circle1"/>
+            <div className="circle2"/>
             <CustomTitle title={renderTitle}/>
             <Box sx={{ display: 'flex' }}>
                 <CssBaseline />
@@ -212,9 +215,8 @@ function DashboardPage() {
                     </List>
                 </Drawer>
                 <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                    <DrawerHeader />
                     <div className='dashboard__container'>
-                        {tab}    
+                        {renderTab}    
                     </div>                    
                 </Box>
             </Box>

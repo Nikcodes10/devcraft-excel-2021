@@ -1,0 +1,31 @@
+.dash {
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.dash_one {
+    flex: 0.4;
+    padding-top: 2rem;
+}
+
+.dash__header {
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.dash_two {
+    flex: 0.3;
+    padding-top: 2rem;
+}
+
+.dash_three {
+    flex: 0.3;
+    background: #162920;
+    border-radius: 30px;
+    padding: 1.25rem;
+    height: 80vh;
+}

@@ -1,6 +1,8 @@
 .dashboardPage {
-    background-color: #103525;
+    background-color: var(--primary-bg);
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .drawer_logo {
@@ -51,4 +53,9 @@
     cursor: pointer;
     box-sizing: content-box;
     margin-top: 5px;
+}
+
+
+.dashboard__container {
+    padding: 1rem;
 }
