@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../context/AuthContext';
 import CustomTitle from '../../utils/CustomTitle'
 
+import coins from '../../assets/svg/coins.svg'
+import named_logo from '../../assets/svg/named_logo.svg'
 import './Auth.css'
 
 
@@ -59,14 +61,15 @@ function Login() {
   return (
     <div className='auth'>
       <CustomTitle title="Sign Up"/>
+      <div className="circle1"/>
+      <div className="circle2"/>
       <div className='auth__container'>
         <div className='auth__container_left'>
-          <div className='auth_logo' onClick={goToHome}>
-            <img src="" alt="" />
-            <h2>HyFi</h2>
-          </div>
 
           <form className='auth_form' onSubmit={handleSignUp}>
+          <div className='auth_logo' onClick={goToHome}>
+            <img src={named_logo} alt="" className='auth_logo_img'/>
+          </div>
             <h1 className='af__h1'>Welcome Back!</h1>
             <h6 className='af__h6'>Please Log in to your account.</h6>
 
@@ -87,15 +90,16 @@ function Login() {
               <button type='submit' className='auth__primary_btn'>Login</button>
               <button onClick={goToSignUp} className='auth__secondary_btn'>Sign Up</button>
             </div>
-          </form>
-
-          <div className='auth_footer'>
+            <div className='auth_footer'>
             <p>By sign up you agree to our terms and conditions and have read our data policy</p>
           </div>
+          </form>
+
+
 
         </div>
         <div className='auth__container_right'>
-
+          <img src={coins} alt="" className='auth_image'/>
         </div>
       </div>
     </div>

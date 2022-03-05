@@ -1,7 +1,31 @@
 .auth {
     min-height: 100vh;
     padding: 5rem 0;
-    background-color: var(--secondary_color);
+    background-color: var(--primary-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.circle1{
+    position: absolute;
+    top: -150px;
+    left: 200px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #23C67F55;
+    filter: blur(100px);
+}
+
+.circle2 {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: #23C67F55;
+    filter: blur(100px);
 }
 
 .auth__container {
@@ -9,11 +33,9 @@
     justify-content: center;
     width: 85%;
     margin: auto;
-    background-color: #ffffff;
     height: 100%;
     min-height: 80vh;
     border-radius: 15px;
-    border: 6px solid var(--primary-color);
 }
 
 .auth__container_left {
@@ -31,29 +53,37 @@
     gap: 0.25rem;
 }
 
-.auth__container_right {
-    flex: 0.5;
+.auth_logo_img {
+    width: 70%;
+    margin-bottom: 2rem;
 }
+
 
 .auth_form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 70%;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+    padding: 2rem;
 }
 
 .af__h1 {
-    color: var(--tertiary-color);
+    color: #FFFFFF;
     font-family: var(--primary-font);
     font-size: 2.05rem;
+    font-weight: bold;
 }
 
 .af__h6 {
-    color: var(--tertiary-color);
+    color: rgba(255, 255, 255, 0.8);
     opacity: 0.85;
     font-family: var(--primary-font);
     margin-top: 0.15rem;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
 .auth_input_container {
@@ -71,7 +101,7 @@
     align-items: flex-start;
     gap: 0.125rem;
     border-radius: 10px;
-    border: 2px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     width: 100%;
     padding: 0.25rem 0.65rem;
 }
@@ -79,7 +109,7 @@
 .auth_label {
     font-size: 0.75rem;
     font-weight: 500;
-    color: #333333b6;
+    color: rgba(255, 255, 255, 0.6);
     font-family: var(--secondary-font);
 }
 
@@ -87,11 +117,12 @@
     width: 100%;
     font-family: var(--primary-font);
     font-weight: 600;
-    color: var(--tertiary-color);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.75rem;
     outline: none;
     border: none;
-    caret-color: var(--secondary_color);
+    caret-color: var(--primary-color);
+    background-color: transparent;
 }
 
 
@@ -105,7 +136,7 @@
 
 .auth_btns button {
     width: 160px;
-    height: 50px;
+    height: 40px;
     border-radius: 10px;
     cursor: pointer;
     outline: none;
@@ -122,9 +153,9 @@
 }
 
 .auth__secondary_btn {
-    background-color: #ffffff;
+    background-color: transparent;
     border: 2px solid var(--primary-color);
-    color: var(--tertiary-color);
+    color: #ffffff;
 }
 
 .auth_footer {
@@ -137,4 +168,98 @@
     color: #686868b7;
     font-weight: 600;
     font-size: 0.85rem;
+}
+
+.auth__container_right {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth_image {
+    width: 90%;
+    pointer-events: none;
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+    .auth {
+        padding: 4rem 0;
+    }
+    .auth__container {
+        width: 100%;
+    }
+    
+}
+  
+  
+@media screen and (max-width: 992px) {
+    .auth {
+        padding: 1rem 0;
+    }
+    .auth__container {
+        width: 100%;
+    }
+    .auth__container_right {
+        display: none;
+    }
+    .auth__container_left {
+        flex: 1;
+        padding: 1rem 2rem;
+    }
+    .auth_form {
+        width: 80%;
+        padding: 2rem;
+        margin: auto;
+    }
+    .auth_footer {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+}
+  
+@media screen and (max-width: 800px) {
+    .auth__container_left {
+        flex: 1;
+        padding: 1rem;
+    }
+    .auth_form {
+        width: 100%;
+        padding: 1rem;
+        margin: auto;
+    }
+    .auth_btns button {
+        width: 140px;
+        font-size: 0.8rem;
+    }
+    .af__h1 {
+        font-size: 1.75rem;
+    }
+    .af__h6 {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .auth_btns button {
+        width: 120px;
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 
+480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
+
+}
+
+
+@media only screen and (device-width: 768px) {
+
 }
