@@ -1,7 +1,7 @@
 .home {
     padding: 0 2rem;
     min-height: 100vh;
-    background-color: rgba(0, 0, 0, 0.514);
+    background-color: var(--primary-bg);
 }
 
 .home__container {
@@ -31,8 +31,19 @@
 }
 
 .home_left__content h1 {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-family: var(--primary-font);
+    color: #ffffff;
+    line-height: 110%;
+    font-weight: 600;
+}
+
+.primary__color {
+    color: var(--primary-color);
+}
+
+.bold {
+    font-weight: 800;
 }
 
 .home_left__content p {
@@ -41,6 +52,7 @@
     font-weight: 500;
     line-height: 130%;
     margin-top: 0.5rem;
+    color: #ffffff;
 }
 
 .home_btn_container {
@@ -51,46 +63,24 @@
     margin-top: 1.5rem;
 }
 
-.homeBtn {
-    outline: none;
-    height: 48px;
-    width: 160px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-family: 'Neucha', cursive;
-    font-size: 1.15rem;
-    font-weight: 800;
-    white-space: nowrap;
-}
 
-.home_d_btn {
-    background-color: var(--primary-color);
-    border: none;
-    color: var(--yellow);
-}
 
 .home_g_btn {
     box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: 3px solid var(--primary-color);
+    background-color: #b1bec5;
     color: var(--primary-color);
-    outline: 0;
-    border-color: var(--primary-color);
-    white-space: nowrap !important;
-    color: var(--primary-color);
-    background-image: linear-gradient(45deg, var(--primary-color) 50%, transparent 50%);
-    background-position: 100%;
-    background-size: 400%;
-    transition: background 200ms ease-in-out;
-}
-
-
-.home_g_btn:hover {
-    background-position: 0;
-    color: var(--yellow);
+    outline: none;
+    border: none;
+    color: #000000ef;
+    text-decoration: none;
+    height: 60px;
+    width: 190px;
+    cursor: pointer;
+    border-radius: 18px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    white-space: nowrap;
+    font-family: var(--secondary-font);
 }
 
 .home_right {
@@ -98,22 +88,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    padding: 4rem 0;
 }
 
-.home_right_content {
-    width: 300px;
-    height: 400px;
-    background-color: #74c58f;
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+.landing_img {
+    width: 100%;
+    pointer-events: none;
 }
-
 
 
 @media (min-width: 992px) and (max-width: 1380px) {
@@ -129,6 +109,7 @@
     .home__container {
         flex-direction: column;
         height: 100%;
+        gap: 1.5rem;
     }
 
     .home_left__content {
@@ -142,14 +123,10 @@
         width: 100%;
     }
     .home_left__content h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .home_left__content p {
-        font-size: 1rem;
-    }
-    .home__hr {
-        width: 100%;
-        margin: 0.5rem 0;
+        font-size: 1.25rem;
     }
 
     .home_btn_container {
@@ -161,45 +138,53 @@
         width: 100%;
     }
 
-    .homeBtn {
-        outline: none;
-        height: 48px;
-        width: 120px;
-        border-radius: 10px;
-        font-size: 1.05rem;
+    .landing_img {
+        width: 50%;
     }
+
+
 }
 
 @media screen and (max-width: 800px) {
+    .home {
+        padding: 0 1rem;
+    }
     .home_left__content {
         padding: 1rem;
         width: 100%;
         margin-top: 0;
         gap: 0.5rem;
     }
-    .homeBtn {
-        outline: none;
-        height: 48px;
-        width: 110px;
-        font-size: 1.05rem;
+
+    .home_g_btn {
+        height: 55px;
+        width: 170px;
+        margin-top: 1rem;
     }
+    .landing_img {
+        width: 70%;
+    }
+
     
 }
 
 @media screen and (max-width: 600px) {
-    .homeBtn {
-        outline: none;
-        height: 48px;
-        width: 110px;
+    .home_left__content h1 {
+        font-size: 2.25rem;
+    }
+    .home_left__content p {
         font-size: 1rem;
+    }
+    .home_g_btn {
+        height: 50px;
+        width: 160px;
+        margin-top: 0.5rem;
+    }
+    .landing_img {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 400px) {
-    .homeBtn {
-        outline: none;
-        height: 40px;
-        width: 110px;
-        font-size: 1rem;
-    }
+
 }

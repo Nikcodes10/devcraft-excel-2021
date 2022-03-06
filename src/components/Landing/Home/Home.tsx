@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Navbar } from '../..'
 
-
+import landing from '../../../assets/svg/landing.svg'
 import './Home.css'
 
 function Home() {
@@ -13,22 +13,19 @@ function Home() {
             <div className='home__container'>
                 <div className='home_left'>
                     <div className='home_left__content'>
-                        <h1>Smart Investments with HyFi bank</h1>
+                        <h1>The <span className='bold'>Smartest</span> Bank on your <span className='primary__color bold'>Smartphone</span></h1>
                         <p>
                             The easiste way to invest in mutual funds, obligation, money market and stock
                         </p>
                         <div className='home_btn_container'>
-                            <Link to='/home'>
-                                <button className='homeBtn home_g_btn'>Let's start</button>
+                            <Link to='/login'>
+                                <button className='home_g_btn'>Let's start</button>
                             </Link>
                         </div>
                     </div>
                 </div>
                 <div className='home_right'>
-                    <div className='home_right_content'>
-                        <h1>$590,568</h1>
-                        <h3>+80.05 / 0.5%</h3>
-                    </div>
+                    <img src={landing} alt="" className='landing_img'/>
                 </div>
             </div>
         </div>
