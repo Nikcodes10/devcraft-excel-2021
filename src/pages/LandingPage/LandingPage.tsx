@@ -9,8 +9,8 @@ function LandingPage() {
         <div className='landingPage'>
             <div className="circle1"/>
             <div className="circle2"/>
-            {/* <Home />
-            <Landing /> */}
+            <Home />
+            <Landing />
             <Discover />
         </div>
     )

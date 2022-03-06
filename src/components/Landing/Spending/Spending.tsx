@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Spending.css'
 
-import spending from '../../../assets/svg/spending.svg'
+import spending from '../../../assets/png/spending.png'
 import dots from '../../../assets/svg/dots.svg'
 
 function Spending() {

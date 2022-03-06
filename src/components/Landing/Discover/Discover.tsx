@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Discover.css'
 
-import discover from '../../../assets/svg/discover.svg'
+import discover from '../../../assets/png/discover.png'
 
 function Discover() {
     return (
