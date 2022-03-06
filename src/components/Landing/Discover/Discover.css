@@ -53,7 +53,7 @@
 }
 
 .discover_info p {
-    font-size: 1.125rem;
+    font-size: 1.325rem;
     font-family: var(--secondary-font);
     font-weight: 500;
     line-height: 130%;
@@ -110,7 +110,7 @@
         font-size: 2rem;
     }
     .discover_info p {
-        font-size: 1.05rem;
+        font-size: 1.15rem;
     }
 
 

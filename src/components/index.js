@@ -12,6 +12,7 @@ export { default as Security } from './Landing/Security/Security'
 
 export { default as Dash } from './Dashboard/Dash/Dash'
 export { default as Account } from './Dashboard/Account/Account'
+export { default as Transaction } from './Dashboard/Transaction/Transaction'
 
 
 export { default as FourNotFour } from './FourNotFour/FourNotFour'

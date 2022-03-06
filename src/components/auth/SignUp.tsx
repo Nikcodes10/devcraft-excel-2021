@@ -76,7 +76,7 @@ function SignUp() {
 
           <form className='auth_form' onSubmit={handleSignUp}>
             <div className='auth_logo' onClick={goToHome}>
-              <img src={named_logo} alt="" className='auth_logo_img'/>
+              <img src={named_logo} alt="HyFi" className='auth_logo_img'/>
             </div>
             <h1 className='af__h1'>Create Account!</h1>
             <h6 className='af__h6'>Please enter your details.</h6>
@@ -117,7 +117,7 @@ function SignUp() {
 
         </div>
         <div className='auth__container_right'>
-          <img src={coins} alt="" className='auth_image'/>
+          <img src={coins} alt="HyFi" className='auth_image'/>
         </div>
       </div>
     </div>

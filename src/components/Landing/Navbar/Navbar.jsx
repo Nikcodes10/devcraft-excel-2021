@@ -8,7 +8,7 @@ import named_logo from '../../../assets/svg/named_logo.svg'
 function Navbar() {
     return (
         <div className='navbar'>
-            <img src={named_logo} alt="" />
+            <img src={named_logo} alt="HyFi" />
 
             <div className='navbar_btn'>
                 <Link to="/login">

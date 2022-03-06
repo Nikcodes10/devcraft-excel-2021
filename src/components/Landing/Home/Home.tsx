@@ -25,7 +25,7 @@ function Home() {
                     </div>
                 </div>
                 <div className='home_right'>
-                    <img src={landing} alt="" className='landing_img'/>
+                    <img src={landing} alt="HyFi" className='landing_img'/>
                 </div>
             </div>
         </div>

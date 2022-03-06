@@ -1,0 +1,24 @@
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+}
+
+.transaction__img {
+    height: 100%;
+}
+
+  
+@media screen and (max-width: 992px) {
+    .transaction {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .transaction {
+        padding: 0;
+    }
+}
