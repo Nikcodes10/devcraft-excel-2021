@@ -28,7 +28,7 @@ function Profile() {
       setPassword(r.user.password)
       setCountry(r.user.country)
     })
-    .catch(e => console.log(e))
+    .catch(e => console.log(e)) // eslint-disable-next-line
   }, [])
 
   return (

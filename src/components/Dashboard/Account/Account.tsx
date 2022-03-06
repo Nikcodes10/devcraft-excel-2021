@@ -23,7 +23,6 @@ function Account() {
     const [open, setOpen] = useState(false);
     const [mode, setMode] = useState('1');
 
-    console.log(mode)
     const [card, setCard] = useState('')
     const [cvv, setCvv] = useState('')
     const [phone, setPhone] = useState('')
