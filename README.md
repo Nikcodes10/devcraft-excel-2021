@@ -160,5 +160,26 @@
 └── yarn-error.log
 ```
 
+<br >
 
 ## Screenshots
+
+
+<div style="display: flex; justify-content: space-between;">
+    <img src="./screenshots/1.PNG" width="90%" alt="">
+</div>
+<br>
+<div style="display: flex; justify-content: space-between;">
+    <img src="./screenshots/2.PNG" width="48%" alt="">
+    <img src="./screenshots/3.PNG" width="48%" alt="">
+</div>
+<br>
+<div style="display: flex; justify-content: space-between;">
+    <img src="./screenshots/4.PNG" width="48%" alt="">
+    <img src="./screenshots/5.PNG" width="48%" alt="">
+</div>
+<br>
+<div style="display: flex; justify-content: space-between;">
+    <img src="./screenshots/6.PNG" width="48%" alt="">
+    <img src="./screenshots/7.PNG" width="48%" alt="">
+</div>
