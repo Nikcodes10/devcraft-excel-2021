@@ -17,7 +17,7 @@ import named_logo from '../../assets/svg/named_logo.svg'
 
 import './DashboardPage.css'
 import CustomTitle from '../../utils/CustomTitle';
-import { Dash } from '../../components';
+import { Dash, Account } from '../../components';
 
 
 const drawerWidth = 240;
@@ -76,7 +76,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 function DashboardPage() {
 
     const [open, setOpen] = useState(false);
-    const [tab, setTab] = useState(1)
+    const [tab, setTab] = useState(2)
 
     let navigate = useNavigate();
 
@@ -96,7 +96,7 @@ function DashboardPage() {
     if (tab === 1) {
         renderTab = <Dash />
     } else if(tab === 2) {
-        renderTab = null
+        renderTab = <Account />
     } else if(tab === 3) {
         renderTab = null
     } else if(tab === 4) {
