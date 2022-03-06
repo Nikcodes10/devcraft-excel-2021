@@ -43,7 +43,7 @@ function SignUp() {
       valid = false;
     }
     if(!name) {
-      setUsernameErr('Enter name');
+      setNameErr('Enter name');
       valid = false;
     }
     if(!email) {
@@ -85,22 +85,22 @@ function SignUp() {
               <div className='auth_single_input'>
                 <label className='auth_label'>Name</label>
                 <input className='auth_input' type='text' value={name} onChange={(e) => setName(e.target.value)}/>
-                <p></p>
+                <p>{nameErr}</p>
               </div>
               <div className='auth_single_input'>
                 <label className='auth_label'>Email</label>
                 <input className='auth_input' type='text' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <p></p>
+                <p>{emailErr}</p>
               </div>
               <div className='auth_single_input'>
                 <label className='auth_label'>Username</label>
                 <input className='auth_input' type='text' value={username} onChange={(e) => setUsername(e.target.value)}/>
-                <p></p>
+                <p>{usernameErr}</p>
               </div>
               <div className='auth_single_input'>
                 <label className='auth_label'>Password</label>
                 <input className='auth_input' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <p></p>
+                <p>{passwordErr}</p>
               </div>
             </div>
 

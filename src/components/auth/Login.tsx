@@ -36,7 +36,7 @@ function Login() {
       valid = false;
     }
     if(!password) {
-      setUsernameErr('Enter password');
+      setPasswordErr('Enter password');
       valid = false;
     }
     if(!valid)  return;
@@ -77,12 +77,12 @@ function Login() {
               <div className='auth_single_input'>
                 <label className='auth_label'>Username</label>
                 <input className='auth_input' type='text' value={username} onChange={(e) => setUsername(e.target.value)}/>
-                <p></p>
+                <p>{usernameErr}</p>
               </div>
               <div className='auth_single_input'>
                 <label className='auth_label'>Password</label>
                 <input className='auth_input' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <p></p>
+                <p>{passwordErr}</p>
               </div>
             </div>
 
