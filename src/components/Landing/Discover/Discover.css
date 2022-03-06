@@ -1,0 +1,164 @@
+.discover {
+    padding: 3rem 2rem;
+    min-height: 100vh;
+    background-color: var(--primary-bg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.discover__container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.discover_left {
+    flex: 0.5;
+    height: 100%;
+    position: relative;
+}
+
+
+.discover_left__content {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    color: var(--text-main);
+    height: 100%;
+    margin-top: 1rem;
+}
+
+.discover h1 {
+    font-size: 2.5rem;
+    font-family: var(--primary-font);
+    color: #ffffff;
+    line-height: 110%;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.discover_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-top: 1rem;
+}
+
+.discover_info p {
+    font-size: 1.125rem;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    line-height: 130%;
+    margin-top: 0.5rem;
+    color: #ffffff;
+}
+
+
+.discover_right {
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discover_img {
+    width: 90%;
+    pointer-events: none;
+}
+
+.discover_dots {
+    position: absolute;
+    width: 120px;
+}
+
+
+@media (min-width: 992px) and (max-width: 1380px) {
+    .discover_left__content {
+        padding: 3rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .discover__container {
+        flex-direction: column;
+        height: 100%;
+        gap: 1.5rem;
+    }
+
+    .discover_left__content {
+        padding: 3rem;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .discover_right {
+        flex: 1;
+        width: 100%;
+    }
+    .discover h1 {
+        font-size: 2rem;
+    }
+    .discover_info p {
+        font-size: 1.05rem;
+    }
+
+
+    .discover_img {
+        width: 50%;
+    }
+
+    .discover_dots {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .discover {
+        padding: 1rem;
+    }
+    .discover h1 {
+        padding: 0 1rem;
+        margin-bottom: 0.75rem;
+    }
+    .discover_left__content {
+        padding: 1rem;
+        width: 100%;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    .discover_img {
+        width: 70%;
+    }
+
+    
+}
+
+@media screen and (max-width: 600px) {
+    .discover h1 {
+        font-size: 1.85rem;
+    }
+    .discover_info p {
+        font-size: 0.95rem;
+    }
+
+    .discover_img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+}

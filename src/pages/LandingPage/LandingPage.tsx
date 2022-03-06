@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Home } from '../../components'
+import { Home, Landing, Discover } from '../../components'
 
 import './LandingPage.css'
 
@@ -9,7 +9,9 @@ function LandingPage() {
         <div className='landingPage'>
             <div className="circle1"/>
             <div className="circle2"/>
-            <Home />
+            {/* <Home />
+            <Landing /> */}
+            <Discover />
         </div>
     )
 }
