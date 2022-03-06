@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
 
 .fournotfour{
     display: flex;
@@ -12,7 +12,7 @@
 .fournotfour > p {
     font-size: 3.5rem;
     text-align: center;
-    color: #1a001a;
+    color: #0C1712;
 }
 
 .fnf__btn {
@@ -21,8 +21,8 @@
     width: 150px;
     height: 50px;
     border-radius: 10px;
-    color: pink;
-    background-color: #1a001a;
+    color: #ffffff;
+    background-color: #0C1712;
     border: none;
     outline: none;
     cursor: pointer;
