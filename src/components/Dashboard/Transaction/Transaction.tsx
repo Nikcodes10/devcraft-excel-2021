@@ -6,7 +6,7 @@ import transaction from '../../../assets/svg/transaction.svg'
 function Transaction() {
     return (
         <div className='transaction'>
-            <img src={transaction} alt="HyFi"  className='transaction__img'/>
+            <img src={transaction} alt=""  className='transaction__img'/>
         </div>
     )
 }

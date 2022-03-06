@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import FadeIn from 'react-fade-in';
 
 import { Navbar } from '../..'
 
@@ -13,19 +14,23 @@ function Home() {
             <div className='home__container'>
                 <div className='home_left'>
                     <div className='home_left__content'>
-                        <h1>The <span className='bold'>Smartest</span> Bank on your <span className='primary__color bold'>Smartphone</span></h1>
-                        <p>
-                            The easiste way to invest in mutual funds, obligation, money market and stock
-                        </p>
-                        <div className='home_btn_container'>
-                            <Link to='/login'>
-                                <button className='home_g_btn'>Let's start</button>
-                            </Link>
-                        </div>
+                        <FadeIn delay={400} transitionDuration={2000}>
+                            <h1>The <span className='bold'>Smartest</span> Bank on your <span className='primary__color bold'>Smartphone</span></h1>
+                            <p>
+                                The easiste way to invest in mutual funds, obligation, money market and stock
+                            </p>
+                            <div className='home_btn_container'>
+                                <Link to='/login'>
+                                    <button className='home_g_btn'>Let's start</button>
+                                </Link>
+                            </div>
+                        </FadeIn>
                     </div>
                 </div>
                 <div className='home_right'>
-                    <img src={landing} alt="HyFi" className='landing_img'/>
+                <FadeIn delay={200} transitionDuration={2000}>
+                    <img src={landing} alt="" className='landing_img'/>
+                </FadeIn>
                 </div>
             </div>
         </div>

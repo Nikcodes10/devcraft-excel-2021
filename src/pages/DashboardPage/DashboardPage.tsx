@@ -134,10 +134,10 @@ function DashboardPage() {
                 >
                     <DrawerHeader>
                         <IconButton sx={{ display: open ? 'none' : 'block' }}>
-                            <img src={logo} alt="HyFi" className='drawer_logo'/>
+                            <img src={logo} alt="" className='drawer_logo'/>
                         </IconButton>
                         <IconButton sx={{ display: !open ? 'none' : 'block' }}>
-                            <img src={named_logo} alt="HyFi" className='drawer_logo_named'/>
+                            <img src={named_logo} alt="" className='drawer_logo_named'/>
                         </IconButton>
                     </DrawerHeader>
                     <List>

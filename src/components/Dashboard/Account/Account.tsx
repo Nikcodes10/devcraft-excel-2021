@@ -127,14 +127,14 @@ function Account() {
                         <div className="circle card-c2"></div>
                         <div className="top">
                             <div className="logo">
-                                <img src={logo} alt="HyFi" />
+                                <img src={logo} alt="" />
                             </div>
                             <div className="pay">
-                                <img src={pay} alt="HyFi" />
+                                <img src={pay} alt="" />
                             </div>
                         </div>
                         <div className="chip">
-                            <img src={chip} alt="HyFi" />
+                            <img src={chip} alt="" />
                         </div>
                         <div className="number">5040 0987 5100 7453</div>
                         <div className="bottom">
@@ -147,7 +147,7 @@ function Account() {
                             </div>
                             <div className="right">
                                 <div className="logo">
-                                    <img src={logos_mastercard} alt="HyFi" />
+                                    <img src={logos_mastercard} alt="" />
                                 </div>
                             </div>
                         </div>
