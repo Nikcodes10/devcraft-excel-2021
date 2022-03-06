@@ -82,32 +82,32 @@ function Account() {
                             </FormControl>
                             { mode === '1' ? (
                                 <div className='payment__container'>
-                                    <div className='auth_single_input'>
-                                        <label className='auth_label'>Card Number</label>
-                                        <input className='auth_input' type='text' value={card} onChange={(e) => setCard(e.target.value)}/>
+                                    <div className='card_single_input'>
+                                        <label className='card_label'>Card Number</label>
+                                        <input className='card_input' type='text' value={card} onChange={(e) => setCard(e.target.value)}/>
                                     </div>
-                                    <div className='auth_single_input'>
-                                        <label className='auth_label'>CVV</label>
-                                        <input className='auth_input' type='text' value={cvv} onChange={(e) => setCvv(e.target.value)}/>
+                                    <div className='card_single_input'>
+                                        <label className='card_label'>CVV</label>
+                                        <input className='card_input' type='text' value={cvv} onChange={(e) => setCvv(e.target.value)}/>
                                     </div>
-                                    <div className='auth_single_input'>
-                                        <label className='auth_label'>Password</label>
-                                        <input className='auth_input' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                                    <div className='card_single_input'>
+                                        <label className='card_label'>Password</label>
+                                        <input className='card_input' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                                     </div>
                                 </div>
                             ) : 
                                 <div className='payment__container'>
-                                    <div className='auth_single_input'>
-                                        <label className='auth_label'>UPI Id</label>
-                                        <input className='auth_input' type='text' value={card} onChange={(e) => setCard(e.target.value)}/>
+                                    <div className='card_single_input'>
+                                        <label className='card_label'>UPI Id</label>
+                                        <input className='card_input' type='text' value={card} onChange={(e) => setCard(e.target.value)}/>
                                     </div>
-                                    <div className='auth_single_input'>
-                                        <label className='auth_label'>Phone</label>
-                                        <input className='auth_input' type='text' value={phone} onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g,""))}/>
+                                    <div className='card_single_input'>
+                                        <label className='card_label'>Phone</label>
+                                        <input className='card_input' type='text' value={phone} onChange={(e) => setPhone(e.target.value.replace(/[^0-9]/g,""))}/>
                                     </div>
-                                    <div className='auth_single_input'>
-                                        <label className='auth_label'>Password</label>
-                                        <input className='auth_input' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
+                                    <div className='card_single_input'>
+                                        <label className='card_label'>Password</label>
+                                        <input className='card_input' type='password' value={password} onChange={(e) => setPassword(e.target.value)}/>
                                     </div>
                                 </div>
                             }

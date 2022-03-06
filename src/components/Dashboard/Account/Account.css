@@ -45,14 +45,14 @@
     gap: 1rem;
 }
 
-.auth_label {
+.card_label {
     font-size: 0.75rem;
     font-weight: 500;
     color: rgba(255, 255, 255, 0.9);
     font-family: var(--secondary-font);
 }
 
-.auth_single_input {
+.card_single_input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -63,7 +63,7 @@
     padding: 0.25rem 0.65rem;
 }
 
-.auth_input {
+.card_input {
     width: 100%;
     font-family: var(--primary-font);
     font-weight: 600;
@@ -255,6 +255,7 @@
         gap: 2rem;
     }
 
+
     .account__header {
         width: 100%;
         display: flex;
@@ -262,9 +263,14 @@
         justify-content: flex-start;
     }
 
+    .add_account_modal {
+        width: 400px;
+        min-height: 300px;
+        margin-top: 2rem;
+    }
     
     .add_acnt__btn {
-        width: 200px;
+        width: 100%;
         white-space: nowrap;
     }
 }
@@ -275,6 +281,11 @@
     }
     .card {
         transform: scale(0.7);
+    }
+    .add_account_modal {
+        width: 100%;
+        min-height: 300px;
+        margin-top: 2rem;
     }
 }
 
