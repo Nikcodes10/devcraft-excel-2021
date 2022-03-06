@@ -1,5 +1,7 @@
 # HyFi
 
+### Site URL: [https://hyfi.netlify.app/](https://hyfi.netlify.app/)
+
 ## Table of Contents :scroll:
 - [Folder Structure](#folder-structure)
 - [Screenshots](#screenshots)
