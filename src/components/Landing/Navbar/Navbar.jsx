@@ -14,7 +14,7 @@ function Navbar() {
                 <Link to="/login">
                     <button className="navBtn nav_login">Login</button>
                 </Link>
-                <Link to="/signin">
+                <Link to="/signup">
                     <button className="navBtn nav_signup">Sign up</button>
                 </Link>
             </div>
