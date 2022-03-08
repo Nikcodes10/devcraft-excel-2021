@@ -21,6 +21,10 @@ const transactionSchema = new Schema({
     },
     upiID: {
         type: String
+    },
+    amount: {
+        type: Number,
+        required:true
     }
 }, {
     timestamps:true

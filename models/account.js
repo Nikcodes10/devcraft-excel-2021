@@ -9,7 +9,7 @@ const accountSchema = new Schema({
         
     }, 
     balance: {
-        type: mongoose.Types.Decimal128,
+        type: Number,
         default:'100'
     }
 }, {

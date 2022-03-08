@@ -1,6 +1,7 @@
 const { User } = require('../models');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const  { accountController } = require('.')
 
 const colors = ['red', 'blue', 'pink'];
 
@@ -28,7 +29,7 @@ const signIn = async ({username, name, password, email}) => {
                 color
             });
             await user.save();
-
+            await accountController.createAccount(user);
             delete user.password;
 
             const token = jwt.sign(

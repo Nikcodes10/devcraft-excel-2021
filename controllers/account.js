@@ -1,6 +1,16 @@
 const { Account, UPI, Card } = require('../models');
 const bcrypt = require('bcryptjs');
 
+const getAccount = async (user) => {
+    try {
+        const account = await Account.findOne({user:user._id});
+        return { "success":true, "code":200, account }
+    } catch(e) {
+        console.log(e);
+    }
+    return { "success":false, "code":500 }
+}
+
 const createAccount = async (user) => {
     const account = new Account(
         {
@@ -80,5 +90,5 @@ const deleteCard = async ({cardNo, password}) => {
     })
 }
 
-const accountController = { createAccount, createCard, enableUPI, deleteCard }
+const accountController = { createAccount, createCard, enableUPI, deleteCard, getAccount }
 module.exports = accountController;

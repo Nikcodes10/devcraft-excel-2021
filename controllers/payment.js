@@ -1,15 +1,19 @@
 const { Card, Account, UPI, Transaction } = require('../models');
 const bcrypt = require('bcryptjs');
 
-const handleCardPayment = ({cardNo, password, recieverAccount, amount}) => {
-    let reciever = recieverAccount, payer;
-    Card.findOne({cardNo}).select('password').lean().exec()
+const handleCardPayment = async ({cardNo, password, recieverAccount, amount}) => {
+    let reciever = recieverAccount;
+    let payer;
+    const setPayer = (v) => {
+        console.log(v);
+        payer = v;
+    }
+    return await Card.findOne({cardNo}).select('password').populate('account').lean().exec()
     .then(async(c) => {
         const correct = await bcrypt.compare(password, c.password)
         delete c.password
         if(!correct)    throw "Unauthorized";
-
-        payer = c.account;
+        setPayer(c.account._id)
         return payer;
 
     }).then(a => 
@@ -29,32 +33,34 @@ const handleCardPayment = ({cardNo, password, recieverAccount, amount}) => {
             reciever,
             payer,
             details:`paid via card XXXX ${cardNo.substr(13)}`,
-            cardNo
+            cardNo,
+            amount
         })
         return transaction.save()
     })
     .then(() => {
-        return { "success": true, "message": "transaction successful"}
+        return { "success": true, "code":200, "message": "transaction successful"}
     })
     .catch(e => {
         console.log(e);
-        return { "success": false, "message": "transaction failed!"}
+        return { "success": false, "code":500, "message": "transaction failed!"}
     })
 }
 
-const handleUPIpayment = ({id, password, phone, recieverAccount, amount}) => {
+const handleUPIpayment = async ({id, password, phone, recieverAccount, amount}) => {
     let upi, upiID;
     let reciever = recieverAccount, payer;
     if(phone)
-        upi = UPI.findOne({phone}).select('password').lean().exec()
-    else upi = UPI.findOne(id).select('password').lean().exec()
+        upi = UPI.findOne({phone}).select('password').select('id').populate('account').lean().exec()
+    else upi = UPI.findOne({id}).select('password').select('id').populate('account').lean().exec()
 
-    upi.then(async(u) => {
+    return await upi.then(async(u) => {
         const correct = await bcrypt.compare(password, u.password)
-        delete u.password
         if(!correct)    throw "Unauthorized";
+
         upiID = u.id;
-        payer = u.account
+        console.log(u)
+        payer = u.account._id
         return payer;
     }).then(a => 
         Account.findByIdAndUpdate(a, {
@@ -73,15 +79,16 @@ const handleUPIpayment = ({id, password, phone, recieverAccount, amount}) => {
             reciever,
             payer,
             details:`paid via upi ${upiID}`,
-            upiID
+            upiID,
+            amount
         })
         return transaction.save()
     }).then(() => {
-        return { "success": true, "message": "transaction successful"}
+        return { "success": true, "code":200, "message": "transaction successful"}
     })
     .catch(e => {
         console.log(e);
-        return { "success": false, "message": "transaction failed!"}
+        return { "success": false, "code":500, "message": "transaction failed!"}
     })
 }
 

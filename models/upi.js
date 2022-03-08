@@ -16,7 +16,8 @@ const upiSchema = new Schema({
         required:true
     },
     id: {
-        type: String
+        type: String,
+        required:true
     },
     password: {
         type:String,

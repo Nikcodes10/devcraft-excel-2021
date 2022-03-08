@@ -3,6 +3,9 @@ const { Transaction } = require("../models");
 const getTransactions = async ({
     cardNo, upiID, account
 }) => {
+    if(!cardNo && !upiID && !account)   
+        return { "code":304, "message":"Bad request"}
+        
     let transactions;
     try {
         if(cardNo) {
